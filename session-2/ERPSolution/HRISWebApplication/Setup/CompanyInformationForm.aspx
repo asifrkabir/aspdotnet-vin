@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h4>COMPANY SETUP</h4>
+            <h4 style="background-color: cornflowerblue; color: white; text-align: center">COMPANY SETUP</h4>
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -150,7 +150,7 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" />
+                        <asp:Button style="background-color: cornflowerblue; border: 1px solid white; border-radius: 5px; color: white" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
                     </td>
                 </tr>
             </table>
