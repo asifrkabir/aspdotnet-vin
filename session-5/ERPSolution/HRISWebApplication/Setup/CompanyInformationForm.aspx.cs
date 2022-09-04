@@ -28,6 +28,25 @@ namespace HRISWebApplication.Setup
             ShowCompanyInformation();
         }
 
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+            txtCompanyID.Text = string.Empty;
+            txtCompanyName.Text = string.Empty;
+            txtCompanyAddress1.Text = string.Empty;
+            txtCompanyAddress2.Text = string.Empty;
+            txtCompanyAddress3.Text = string.Empty;
+            txtContactPersonAddress.Text = string.Empty;
+            txtContactPersonEmail.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            txtFax.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtURL.Text = string.Empty;
+            txtTIN.Text = string.Empty;
+            txtRegNo.Text = string.Empty;
+            txtVATNo.Text = string.Empty;
+            txtInsurance.Text = string.Empty;
+        }
+
         private void SaveCompanyInformation()
         {
             var companyInfo = new List<string>();
@@ -63,13 +82,23 @@ namespace HRISWebApplication.Setup
             if (e.CommandName.Equals("Delete"))
             {
                 var selectedIndex = int.Parse(e.CommandArgument.ToString());
-                var companyID = companyGrid.Rows[selectedIndex].Cells[1].Text;
+                var companyID = companyGrid.Rows[selectedIndex].Cells[2].Text;
                 companyDataAccess.DeleteRow(companyID);
                 ShowCompanyInformation();
+            }
+
+            else if (e.CommandName.Equals("Select"))
+            {
+
             }
         }
 
         protected void companyGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void companyGrid_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

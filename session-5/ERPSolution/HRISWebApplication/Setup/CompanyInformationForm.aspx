@@ -27,7 +27,7 @@
                     <td style="width: 300px;">
                         <asp:Label ID="Label1" runat="server" Text="Company ID"></asp:Label>
                     </td>
-                    <td>:</td>
+                    <td style="width: 10px;">:</td>
                     <td>
                         <asp:TextBox ID="txtCompanyID" runat="server" Width="300px"></asp:TextBox>
                     </td>
@@ -165,9 +165,11 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td></td>
                     <td>
-                        <asp:Button class="btn btn-primary" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
+                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="Button1" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
+                    </td>
+                    <td>
+                        <asp:Button class="btn btn-warning" ID="Button2" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClear_Click"  />
                     </td>
                 </tr>
                 <tr>
@@ -187,11 +189,16 @@
                 </tr>
             </table>
 
-            <h2 class="bg-success text-center">ALL COMPANIES</h2>
+            <h2 class="bg-primary text-center">ALL COMPANIES</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting">
+            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting" OnSelectedIndexChanged="companyGrid_SelectedIndexChanged">
                 <Columns>
-                    <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True" />
+                    <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True" >
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:CommandField>
+                    <asp:CommandField ShowSelectButton="True">
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:CommandField>
                 </Columns>
             </asp:GridView>
         </div>
