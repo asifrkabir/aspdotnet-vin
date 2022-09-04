@@ -65,12 +65,19 @@ namespace HRISWebApplication.Setup
             companyDataAccess.Save(companyInfo);
         }
 
+        //private void ShowCompanyInformation()
+        //{
+        //    SqlDataReader reader = companyDataAccess.GetCompanyInformation();
+        //    companyGrid.DataSource = reader;
+        //    companyGrid.DataBind();
+        //    reader.Close();
+        //}
+
         private void ShowCompanyInformation()
         {
-            SqlDataReader reader = companyDataAccess.GetCompanyInformation();
-            companyGrid.DataSource = reader;
+            var dataTable = companyDataAccess.GetCompanyInformation();
+            companyGrid.DataSource = dataTable;
             companyGrid.DataBind();
-            reader.Close();
         }
 
         private void UpdateCompanyInformation()
