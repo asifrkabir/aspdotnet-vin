@@ -187,7 +187,7 @@
                 </tr>
             </table>
 
-            
+            <h2 class="bg-success text-center">ALL COMPANIES</h2>
 
             <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting">
                 <Columns>
