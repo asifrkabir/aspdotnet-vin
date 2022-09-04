@@ -166,10 +166,10 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="Button1" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
+                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
                     </td>
                     <td>
-                        <asp:Button class="btn btn-warning" ID="Button2" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClear_Click"  />
+                        <asp:Button class="btn btn-warning" ID="btnClear" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClear_Click"  />
                     </td>
                 </tr>
                 <tr>

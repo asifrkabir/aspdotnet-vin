@@ -48,5 +48,13 @@ namespace HRISWebApplication.DataAccess
             SqlCommand command = new SqlCommand(sqlQuery, _conn);
             command.ExecuteNonQuery();
         }
+
+        public void Update(List<string> companyInfo)
+        {
+            var sqlQuery = $@"UPDATE [dbo].[Hrms_Company_Master] Set CompanyName = '{companyInfo[1]}', Address1 = '{companyInfo[2]}', Address2 = '{companyInfo[3]}', Address3 = '{companyInfo[4]}', ContPer1 = '{companyInfo[5]}', ContPer2 = '{companyInfo[6]}', Phone1 = '{companyInfo[7]}', Fax1 = '{companyInfo[8]}', Email1 = '{companyInfo[9]}', Url1 = '{companyInfo[10]}', TIN = '{companyInfo[11]}', RegNo = '{companyInfo[12]}', VATNo = '{companyInfo[13]}', Insurance1 = '{companyInfo[14]}' WHERE CompanyId = '{companyInfo[0]}'";
+
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            command.ExecuteNonQuery();
+        }
     }
 }
