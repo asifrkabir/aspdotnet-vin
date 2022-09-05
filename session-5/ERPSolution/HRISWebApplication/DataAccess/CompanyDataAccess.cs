@@ -21,7 +21,24 @@ namespace HRISWebApplication.DataAccess
         {
             _conn.Open();
 
-            var sqlQuery = $"INSERT INTO [dbo].[Hrms_Company_Master] " +
+            if (companyInfo[0].Equals(string.Empty))
+            {
+                HttpContext.Current.Response.Write("<script>alert('Please Add Company ID')</script>");
+            }
+
+            else
+            {
+                //var checkDuplicateIDQuery = $"SELECT COUNT(*) FROM [dbo].[Hrms_Company_Master] WHERE ([CompanyId] = {companyInfo[0]})";
+                //SqlCommand checkIDCommand = new SqlCommand(checkDuplicateIDQuery, _conn);
+                ////checkIDCommand.Parameters.AddWithValue("@companyInfo[0]", companyInfo[0]);
+                //SqlDataReader reader = checkIDCommand.ExecuteReader();
+
+                //if (reader.HasRows)
+                //{
+                //    HttpContext.Current.Response.Write("<script>alert('Company ID already exists')</script>");
+                //}
+
+                var sqlQuery = $"INSERT INTO [dbo].[Hrms_Company_Master] " +
                 $"([CompanyName] ,[CompanyId], [Address1] ,[Address2], [Address3],[ContPer1], [ContPer2], [Phone1]" +
                 $", [Fax1], [Email1] ,[Url1] ,[TIN],[RegNo] ,[VATNo] ,[Insurance1])" +
                 $"VALUES " +
@@ -32,9 +49,17 @@ namespace HRISWebApplication.DataAccess
                 $"'{companyInfo[8]}', '{companyInfo[9]}', '{companyInfo[10]}', '{companyInfo[11]}'," +
                 $"'{companyInfo[12]}', '{companyInfo[13]}', '{companyInfo[14]}')";
 
+                SqlCommand command = new SqlCommand(sqlQuery, _conn);
 
-            SqlCommand command = new SqlCommand(sqlQuery, _conn);
-            command.ExecuteNonQuery();
+                try
+                {
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception)
+                {
+                    HttpContext.Current.Response.Write("<script>alert('Company already exists')</script>");
+                }
+            }
 
             _conn.Close();
         }

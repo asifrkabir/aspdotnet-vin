@@ -24,7 +24,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 300px;">
+                    <td style="width: 250px;">
                         <asp:Label ID="Label1" runat="server" Text="Company ID"></asp:Label>
                     </td>
                     <td style="width: 10px;">:</td>
@@ -165,10 +165,9 @@
                 </tr>
                 <tr>
                     <td></td>
+                    <td></td>
                     <td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
-                    </td>
-                    <td>
                         <asp:Button class="btn btn-warning" ID="btnClear" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClear_Click"  />
                     </td>
                 </tr>
@@ -196,7 +195,7 @@
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True" >
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
-                    <asp:CommandField ShowSelectButton="True">
+                    <asp:CommandField ControlStyle-CssClass="btn btn-info" ButtonType="Link" SelectText="Select" ShowSelectButton="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
                 </Columns>
