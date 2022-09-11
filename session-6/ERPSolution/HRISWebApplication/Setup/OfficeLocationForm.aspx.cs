@@ -10,10 +10,10 @@ namespace HRISWebApplication.Setup
 {
     public partial class OfficeLocationForm : System.Web.UI.Page
     {
-        private CompanyDataAccess companyDataAccess;
+        private OfficeLocationDataAccess officeLocationDataAccess;
         public OfficeLocationForm()
         {
-            companyDataAccess = new CompanyDataAccess();
+            officeLocationDataAccess = new OfficeLocationDataAccess();
         }
 
         protected void Page_Load(object sender, EventArgs e)
