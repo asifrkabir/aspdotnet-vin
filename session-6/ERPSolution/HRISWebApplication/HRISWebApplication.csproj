@@ -179,6 +179,7 @@
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\CompanyDataAccess.cs" />
+    <Compile Include="DataAccess\OfficeLocationDataAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

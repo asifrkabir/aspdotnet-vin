@@ -18,7 +18,15 @@ namespace HRISWebApplication.Setup
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Write event for dropdown
+            ShowOfficeLocationInformation();
+        }
 
+        private void ShowOfficeLocationInformation()
+        {
+            var dataTable = officeLocationDataAccess.GetOfficeLocationInformation();
+            officeLocationGrid.DataSource = dataTable;
+            officeLocationGrid.DataBind();
         }
 
         protected void btnSaveOfficeLocation_Click(object sender, EventArgs e)

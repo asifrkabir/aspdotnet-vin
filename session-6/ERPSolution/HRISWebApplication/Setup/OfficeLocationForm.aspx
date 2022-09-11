@@ -128,6 +128,8 @@
                     </asp:CommandField>
                 </Columns>
             </asp:GridView>--%>
+
+            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server"></asp:GridView>
         </div>
     </form>
 </body>
