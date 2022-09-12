@@ -83,7 +83,19 @@ namespace HRISWebApplication.Setup
 
         protected void btnClearOfficeLocation_Click(object sender, EventArgs e)
         {
-            
+            ClearAllInputs();
+        }
+
+        private void ClearAllInputs()
+        {
+            LoadAllCompanies();
+
+            txtOfficeLocationCode.Text = string.Empty;
+            txtOfficeLocationName.Text = string.Empty;
+            txtOfficeLocation.Text = string.Empty;
+            txtOfficeAddress1.Text = string.Empty;
+            txtOfficeAddress2.Text = string.Empty;
+            txtOfficeAddress3.Text = string.Empty;
         }
 
         protected void CompanyDDList_SelectedIndexChanged(object sender, EventArgs e)
