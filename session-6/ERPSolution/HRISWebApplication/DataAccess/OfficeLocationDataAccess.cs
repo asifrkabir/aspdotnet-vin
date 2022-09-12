@@ -18,6 +18,18 @@ namespace HRISWebApplication.DataAccess
             _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionStringCompany"].ConnectionString);
         }
 
+        public void Save(List<string> officeLocationInfo)
+        {
+            _conn.Open();
+
+            var sqlQuery = $"INSERT INTO [dbo].[Hrms_Office_Location_Master] ([CompanyId], [OfficeLocationCode], [OfficeLocationName], [Location], [Address1], [Address2], [Address3]) VALUES ('{officeLocationInfo[0]}', '{officeLocationInfo[1]}', '{officeLocationInfo[2]}', '{officeLocationInfo[3]}', '{officeLocationInfo[4]}', '{officeLocationInfo[5]}', '{officeLocationInfo[6]}')";
+
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            command.ExecuteNonQuery();
+
+            _conn.Close();
+        }
+
         public DataTable GetOfficeLocationInformation()
         {
             _conn.Open();

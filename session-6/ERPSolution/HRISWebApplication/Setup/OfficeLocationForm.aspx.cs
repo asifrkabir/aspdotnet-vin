@@ -14,6 +14,7 @@ namespace HRISWebApplication.Setup
         public static string CompanyId { get; set; }
         private OfficeLocationDataAccess officeLocationDataAccess;
         private CompanyDataAccess companyDataAccess;
+
         public OfficeLocationForm()
         {
             officeLocationDataAccess = new OfficeLocationDataAccess();
@@ -27,6 +28,20 @@ namespace HRISWebApplication.Setup
                 LoadAllCompanies();
                 ShowOfficeLocationInformation();
             }
+        }
+
+        private void SaveOfficeLocation()
+        {
+            var officeLocationInfo = new List<string>();
+            officeLocationInfo.Add(CompanyDDList.SelectedValue);
+            officeLocationInfo.Add(txtOfficeLocationCode.Text);
+            officeLocationInfo.Add(txtOfficeLocationName.Text);
+            officeLocationInfo.Add(txtOfficeLocation.Text);
+            officeLocationInfo.Add(txtOfficeAddress1.Text);
+            officeLocationInfo.Add(txtOfficeAddress2.Text);
+            officeLocationInfo.Add(txtOfficeAddress3.Text);
+
+            officeLocationDataAccess.Save(officeLocationInfo);
         }
 
         private void ShowOfficeLocationInformation()
@@ -62,17 +77,18 @@ namespace HRISWebApplication.Setup
 
         protected void btnSaveOfficeLocation_Click(object sender, EventArgs e)
         {
-
+            SaveOfficeLocation();
+            ShowOfficeLocationInformation();
         }
 
         protected void btnClearOfficeLocation_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void CompanyDDList_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            CompanyId = CompanyDDList.SelectedValue;
         }
     }
 }
