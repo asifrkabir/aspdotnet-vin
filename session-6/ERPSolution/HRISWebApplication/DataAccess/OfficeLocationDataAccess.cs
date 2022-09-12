@@ -45,5 +45,16 @@ namespace HRISWebApplication.DataAccess
             return dataTable;
         }
 
+        public void DeleteRow(string officeLocationCode)
+        {
+            _conn.Open();
+
+            var sqlQuery = $"DELETE FROM [dbo].[Hrms_Office_Location_Master] WHERE OfficeLocationCode='{officeLocationCode}'";
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            command.ExecuteNonQuery();
+
+            _conn.Close();
+        }
+
     }
 }

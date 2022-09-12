@@ -102,5 +102,26 @@ namespace HRISWebApplication.Setup
         {
             CompanyId = CompanyDDList.SelectedValue;
         }
+
+        protected void officeLocationGrid_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Delete"))
+            {
+                var selectedIndex = int.Parse(e.CommandArgument.ToString());
+                var officeLocationCode = officeLocationGrid.Rows[selectedIndex].Cells[3].Text;
+                officeLocationDataAccess.DeleteRow(officeLocationCode);
+                ShowOfficeLocationInformation();
+            }
+        }
+
+        protected void officeLocationGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void officeLocationGrid_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
