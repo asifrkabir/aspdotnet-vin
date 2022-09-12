@@ -72,7 +72,7 @@ namespace HRISWebApplication.Setup
 
             if (dataTable.Rows.Count > 0)
             {
-                CompanyDDList.Items.Insert(0, new ListItem("--- Select Company ID ---", "-1"));
+                CompanyDDList.Items.Insert(0, new ListItem("Select Company ID", "-1"));
 
                 foreach (DataRow dr in dataTable.Rows)
                 {
@@ -84,7 +84,7 @@ namespace HRISWebApplication.Setup
             }
             else
             {
-                CompanyDDList.Items.Insert(0, new ListItem("--- Select Company ID ---", "-1"));
+                CompanyDDList.Items.Insert(0, new ListItem("Select Company ID", "-1"));
                 CompanyId = "";
             }
         }
