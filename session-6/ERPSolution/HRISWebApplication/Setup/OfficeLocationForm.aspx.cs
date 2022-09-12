@@ -44,6 +44,20 @@ namespace HRISWebApplication.Setup
             officeLocationDataAccess.Save(officeLocationInfo);
         }
 
+        private void UpdateOfficeLocationInformation()
+        {
+            var officeLocationInfo = new List<string>();
+            officeLocationInfo.Add(CompanyDDList.SelectedValue);
+            officeLocationInfo.Add(txtOfficeLocationCode.Text);
+            officeLocationInfo.Add(txtOfficeLocationName.Text);
+            officeLocationInfo.Add(txtOfficeLocation.Text);
+            officeLocationInfo.Add(txtOfficeAddress1.Text);
+            officeLocationInfo.Add(txtOfficeAddress2.Text);
+            officeLocationInfo.Add(txtOfficeAddress3.Text);
+
+            officeLocationDataAccess.Update(officeLocationInfo);
+        }
+
         private void ShowOfficeLocationInformation()
         {
             var dataTable = officeLocationDataAccess.GetOfficeLocationInformation();
@@ -77,8 +91,18 @@ namespace HRISWebApplication.Setup
 
         protected void btnSaveOfficeLocation_Click(object sender, EventArgs e)
         {
-            SaveOfficeLocation();
+            if (btnSaveOfficeLocation.Text.Equals("Save"))
+            {
+                SaveOfficeLocation();
+            }
+            else if (btnSaveOfficeLocation.Text.Equals("Update"))
+            {
+                UpdateOfficeLocationInformation();
+                btnSaveOfficeLocation.Text = "Save";
+            }
+
             ShowOfficeLocationInformation();
+            ClearAllInputs();
         }
 
         protected void btnClearOfficeLocation_Click(object sender, EventArgs e)
@@ -111,6 +135,22 @@ namespace HRISWebApplication.Setup
                 var officeLocationCode = officeLocationGrid.Rows[selectedIndex].Cells[3].Text;
                 officeLocationDataAccess.DeleteRow(officeLocationCode);
                 ShowOfficeLocationInformation();
+            }
+
+            else if (e.CommandName.Equals("Select"))
+            {
+                var selectedIndex = int.Parse(e.CommandArgument.ToString());
+
+                CompanyDDList.SelectedValue = officeLocationGrid.Rows[selectedIndex].Cells[2].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[2].Text;
+                CompanyId = CompanyDDList.SelectedValue;
+                txtOfficeLocationCode.Text = officeLocationGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[3].Text;
+                txtOfficeLocationName.Text = officeLocationGrid.Rows[selectedIndex].Cells[4].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[4].Text;
+                txtOfficeLocation.Text = officeLocationGrid.Rows[selectedIndex].Cells[5].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[5].Text;
+                txtOfficeAddress1.Text = officeLocationGrid.Rows[selectedIndex].Cells[6].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[6].Text;
+                txtOfficeAddress2.Text = officeLocationGrid.Rows[selectedIndex].Cells[7].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[7].Text;
+                txtOfficeAddress3.Text = officeLocationGrid.Rows[selectedIndex].Cells[8].Text.Equals("&nbsp;") ? string.Empty : officeLocationGrid.Rows[selectedIndex].Cells[8].Text;
+
+                btnSaveOfficeLocation.Text = "Update";
             }
         }
 
