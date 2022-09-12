@@ -16,7 +16,7 @@
 <body>
     <form class="form" id="form1" runat="server">
         <div>
-            <h2 class="bg-primary text-center">COMPANY SETUP</h2>
+            <h2 class="bg-primary text-center">OFFICE LOCATION SETUP</h2>
             <table style="width: 100%;">
                 <tr>
                     <td>
