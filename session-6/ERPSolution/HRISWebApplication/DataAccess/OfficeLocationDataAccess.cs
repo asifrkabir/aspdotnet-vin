@@ -22,7 +22,7 @@ namespace HRISWebApplication.DataAccess
         {
             _conn.Open();
 
-            string sqlQuery = "SELECT [CompanyId], [CompanyName], [Address1], [Address2], [Address3], [ContPer1], [ContPer2], [Phone1], [Fax1], [Email1], [Url1], [TIN], [RegNo], [VATNo], [Insurance1] FROM [dbo].[Hrms_Company_Master]";
+            string sqlQuery = "SELECT [CompanyId], [OfficeLocationCode], [OfficeLocationName], [Location], [Address1], [Address2], [Address3] FROM [dbo].[Hrms_Office_Location_Master]";
             SqlCommand command = new SqlCommand(sqlQuery, _conn);
             SqlDataReader reader = command.ExecuteReader();
             var dataTable = new DataTable();

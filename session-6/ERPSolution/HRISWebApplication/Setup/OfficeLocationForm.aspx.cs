@@ -1,6 +1,7 @@
 ﻿using HRISWebApplication.DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,16 +11,22 @@ namespace HRISWebApplication.Setup
 {
     public partial class OfficeLocationForm : System.Web.UI.Page
     {
+        public static string CompanyId { get; set; }
         private OfficeLocationDataAccess officeLocationDataAccess;
+        private CompanyDataAccess companyDataAccess;
         public OfficeLocationForm()
         {
             officeLocationDataAccess = new OfficeLocationDataAccess();
+            companyDataAccess = new CompanyDataAccess();
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Write event for dropdown
-            ShowOfficeLocationInformation();
+            if (!Page.IsPostBack)
+            {
+                LoadAllCompanies();
+                ShowOfficeLocationInformation();
+            }
         }
 
         private void ShowOfficeLocationInformation()
@@ -29,12 +36,41 @@ namespace HRISWebApplication.Setup
             officeLocationGrid.DataBind();
         }
 
+        private void LoadAllCompanies()
+        {
+            var dataTable = companyDataAccess.GetCompanyInformation();
+            CompanyDDList.Items.Clear();
+
+            if (dataTable.Rows.Count > 0)
+            {
+                CompanyDDList.Items.Insert(0, new ListItem("--- Select Company ID ---", "-1"));
+
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    var listItem = new ListItem();
+                    listItem.Text = dr["CompanyName"].ToString();
+                    listItem.Value = dr["CompanyId"].ToString();
+                    CompanyDDList.Items.Add(listItem);
+                }
+            }
+            else
+            {
+                CompanyDDList.Items.Insert(0, new ListItem("--- Select Company ID ---", "-1"));
+                CompanyId = "";
+            }
+        }
+
         protected void btnSaveOfficeLocation_Click(object sender, EventArgs e)
         {
 
         }
 
         protected void btnClearOfficeLocation_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void CompanyDDList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -29,7 +29,7 @@
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server" Width="300px"></asp:DropDownList>
+                        <asp:DropDownList ID="CompanyDDList" runat="server" Width="300px" OnSelectedIndexChanged="CompanyDDList_SelectedIndexChanged"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
