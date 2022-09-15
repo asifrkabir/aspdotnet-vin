@@ -156,6 +156,7 @@
     <Content Include="Setup\CompanyInformationForm.aspx" />
     <Content Include="Setup\DepartmentForm.aspx" />
     <Content Include="Setup\OfficeLocationForm.aspx" />
+    <Content Include="Setup\SectionForm.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -182,6 +183,7 @@
     <Compile Include="DataAccess\CompanyDataAccess.cs" />
     <Compile Include="DataAccess\DepartmentDataAccess.cs" />
     <Compile Include="DataAccess\OfficeLocationDataAccess.cs" />
+    <Compile Include="DataAccess\SectionDataAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -213,6 +215,13 @@
     </Compile>
     <Compile Include="Setup\OfficeLocationForm.aspx.designer.cs">
       <DependentUpon>OfficeLocationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\SectionForm.aspx.cs">
+      <DependentUpon>SectionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\SectionForm.aspx.designer.cs">
+      <DependentUpon>SectionForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
