@@ -28,13 +28,20 @@ namespace HRISWebApplication.Setup
             if (!Page.IsPostBack)
             {
                 LoadAllCompanies();
-                //ShowOfficeLocationInformation();
+                ShowDepartmentInformation();
             }
         }
 
         protected void CompanyDDList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowDepartmentInformation()
+        {
+            var dataTable = departmentDataAccess.GetDepartmentInformation();
+            departmentGrid.DataSource = dataTable;
+            departmentGrid.DataBind();
         }
 
         private void LoadAllCompanies()
