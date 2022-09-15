@@ -34,56 +34,47 @@
                 </tr>
                 <tr>
                     <td style="width: 250px;">
-                        <asp:Label ID="Label1" runat="server" Text="Office Location Code"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Department Code"></asp:Label>
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:TextBox ID="txtOfficeLocationCode" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtDepartmentCode" runat="server" Width="300px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label2" runat="server" Text="Office Location Name"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Department Name"></asp:Label>
                     </td>
                     <td>:</td>
                     <td>
-                        <asp:TextBox ID="txtOfficeLocationName" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtDepartmentName" runat="server" Width="300px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label3" runat="server" Text="Location"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Text="Department Location"></asp:Label>
                     </td>
                     <td>:</td>
                     <td>
-                        <asp:TextBox ID="txtOfficeLocation" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtDepartmentLocation" runat="server" Width="300px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label4" runat="server" Text="Address 1"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="Head of Department"></asp:Label>
                     </td>
                     <td>:</td>
                     <td>
-                        <asp:TextBox ID="txtOfficeAddress1" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtHeadOfDepartment" runat="server" Width="300px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="Address 2"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Text="Substitute Head of Department"></asp:Label>
                     </td>
                     <td>:</td>
                     <td>
-                        <asp:TextBox ID="txtOfficeAddress2" runat="server" Width="300px"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="Label6" runat="server" Text="Address 3"></asp:Label>
-                    </td>
-                    <td>:</td>
-                    <td>
-                        <asp:TextBox ID="txtOfficeAddress3" runat="server" Width="300px"></asp:TextBox>
+                        <asp:TextBox ID="txtSubHeadOfDepartment" runat="server" Width="300px"></asp:TextBox>
                     </td>
                 </tr>
                 <tr>

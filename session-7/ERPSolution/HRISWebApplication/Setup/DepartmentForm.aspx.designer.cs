@@ -49,13 +49,13 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// txtOfficeLocationCode control.
+        /// txtDepartmentCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeLocationCode;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentCode;
         
         /// <summary>
         /// Label2 control.
@@ -67,13 +67,13 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// txtOfficeLocationName control.
+        /// txtDepartmentName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeLocationName;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentName;
         
         /// <summary>
         /// Label3 control.
@@ -85,13 +85,13 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// txtOfficeLocation control.
+        /// txtDepartmentLocation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeLocation;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartmentLocation;
         
         /// <summary>
         /// Label4 control.
@@ -103,13 +103,13 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// txtOfficeAddress1 control.
+        /// txtHeadOfDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeAddress1;
+        protected global::System.Web.UI.WebControls.TextBox txtHeadOfDepartment;
         
         /// <summary>
         /// Label5 control.
@@ -121,31 +121,13 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// txtOfficeAddress2 control.
+        /// txtSubHeadOfDepartment control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeAddress2;
-        
-        /// <summary>
-        /// Label6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label6;
-        
-        /// <summary>
-        /// txtOfficeAddress3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOfficeAddress3;
+        protected global::System.Web.UI.WebControls.TextBox txtSubHeadOfDepartment;
         
         /// <summary>
         /// departmentGrid control.
