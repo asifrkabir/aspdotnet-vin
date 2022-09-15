@@ -157,6 +157,15 @@ namespace HRISWebApplication.Setup {
         protected global::System.Web.UI.WebControls.Button btnSaveDepartment;
         
         /// <summary>
+        /// btnClearDepartment control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClearDepartment;
+        
+        /// <summary>
         /// departmentGrid control.
         /// </summary>
         /// <remarks>

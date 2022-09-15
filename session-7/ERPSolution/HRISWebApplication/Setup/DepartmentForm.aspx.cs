@@ -146,5 +146,10 @@ namespace HRISWebApplication.Setup
             txtHeadOfDepartment.Text = string.Empty;
             txtSubHeadOfDepartment.Text = string.Empty;
         }
+
+        protected void btnClearDepartment_Click(object sender, EventArgs e)
+        {
+            ClearAllInputs();
+        }
     }
 }

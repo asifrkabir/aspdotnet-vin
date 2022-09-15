@@ -100,6 +100,7 @@
                     </td>--%>
                     <td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveDepartment" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveDepartment_Click" />
+                        <asp:Button class="btn btn-warning" ID="btnClearDepartment" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearDepartment_Click" />
                     </td>
                 </tr>
                 <tr>
