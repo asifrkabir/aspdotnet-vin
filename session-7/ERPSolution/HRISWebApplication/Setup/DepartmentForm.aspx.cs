@@ -145,6 +145,8 @@ namespace HRISWebApplication.Setup
             txtDepartmentLocation.Text = string.Empty;
             txtHeadOfDepartment.Text = string.Empty;
             txtSubHeadOfDepartment.Text = string.Empty;
+
+            btnSaveDepartment.Text = "Save";
         }
 
         protected void btnClearDepartment_Click(object sender, EventArgs e)
@@ -157,13 +159,35 @@ namespace HRISWebApplication.Setup
             if (e.CommandName.Equals("Delete"))
             {
                 var selectedIndex = int.Parse(e.CommandArgument.ToString());
-                var departmentCode = departmentGrid.Rows[selectedIndex].Cells[3].Text;
+                var departmentCode = departmentGrid.Rows[selectedIndex].Cells[4].Text;
                 departmentDataAccess.DeleteRow(departmentCode);
                 ShowDepartmentInformation();
+            }
+            else if (e.CommandName.Equals("Select"))
+            {
+                var selectedIndex = int.Parse(e.CommandArgument.ToString());
+
+                CompanyDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[2].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[2].Text;
+                CompanyId = CompanyDDList.SelectedValue.ToString();
+                //OfficeLocationDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[3].Text;
+                OfficeLocationCode = OfficeLocationDDList.SelectedValue.ToString();
+                txtDepartmentCode.Text = departmentGrid.Rows[selectedIndex].Cells[4].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[4].Text;
+                txtDepartmentName.Text = departmentGrid.Rows[selectedIndex].Cells[5].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[5].Text;
+                txtDepartmentLocation.Text = departmentGrid.Rows[selectedIndex].Cells[6].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[6].Text;
+                txtHeadOfDepartment.Text = departmentGrid.Rows[selectedIndex].Cells[7].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[7].Text;
+                txtSubHeadOfDepartment.Text = departmentGrid.Rows[selectedIndex].Cells[8].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[8].Text;
+                
+
+                btnSaveDepartment.Text = "Update";
             }
         }
 
         protected void departmentGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void departmentGrid_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
         {
 
         }

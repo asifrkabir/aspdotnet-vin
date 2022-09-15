@@ -118,14 +118,14 @@
 
             <h2 class="bg-primary text-center">ALL DEPARTMENTS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting">
+            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting" OnSelectedIndexChanging="departmentGrid_SelectedIndexChanging">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
-                    <%--<asp:CommandField ControlStyle-CssClass="btn btn-info" ButtonType="Link" SelectText="Select" ShowSelectButton="True">
+                    <asp:CommandField ControlStyle-CssClass="btn btn-info" ButtonType="Link" SelectText="Select" ShowSelectButton="True">
                         <ItemStyle HorizontalAlign="Center" />
-                    </asp:CommandField>--%>
+                    </asp:CommandField>
                 </Columns>
             </asp:GridView>
         </div>
