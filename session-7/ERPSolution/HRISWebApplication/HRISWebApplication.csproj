@@ -154,6 +154,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Setup\CompanyInformationForm.aspx" />
+    <Content Include="Setup\DepartmentForm.aspx" />
     <Content Include="Setup\OfficeLocationForm.aspx" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
@@ -197,6 +198,13 @@
     </Compile>
     <Compile Include="Setup\CompanyInformationForm.aspx.designer.cs">
       <DependentUpon>CompanyInformationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\DepartmentForm.aspx.cs">
+      <DependentUpon>DepartmentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\DepartmentForm.aspx.designer.cs">
+      <DependentUpon>DepartmentForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Setup\OfficeLocationForm.aspx.cs">
       <DependentUpon>OfficeLocationForm.aspx</DependentUpon>
