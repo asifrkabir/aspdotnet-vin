@@ -43,5 +43,16 @@ namespace HRISWebApplication.DataAccess
 
             return dataTable;
         }
+
+        public void DeleteRow(string departmentCode)
+        {
+            _conn.Open();
+
+            var sqlQuery = $"DELETE FROM [dbo].[Hrms_Department_Master] WHERE DepartmentCode='{departmentCode}'";
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            command.ExecuteNonQuery();
+
+            _conn.Close();
+        }
     }
 }

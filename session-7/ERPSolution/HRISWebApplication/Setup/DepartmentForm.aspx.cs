@@ -151,5 +151,21 @@ namespace HRISWebApplication.Setup
         {
             ClearAllInputs();
         }
+
+        protected void departmentGrid_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Delete"))
+            {
+                var selectedIndex = int.Parse(e.CommandArgument.ToString());
+                var departmentCode = departmentGrid.Rows[selectedIndex].Cells[3].Text;
+                departmentDataAccess.DeleteRow(departmentCode);
+                ShowDepartmentInformation();
+            }
+        }
+
+        protected void departmentGrid_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
     }
 }

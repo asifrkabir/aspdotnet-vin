@@ -94,10 +94,6 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <%--<td>
-                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveOfficeLocation" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveOfficeLocation_Click" />
-                        <asp:Button class="btn btn-warning" ID="btnClearOfficeLocation" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearOfficeLocation_Click" />
-                    </td>--%>
                     <td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveDepartment" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveDepartment_Click" />
                         <asp:Button class="btn btn-warning" ID="btnClearDepartment" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearDepartment_Click" />
@@ -122,15 +118,15 @@
 
             <h2 class="bg-primary text-center">ALL DEPARTMENTS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server">
-                <%--<Columns>
+            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting">
+                <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
-                    <asp:CommandField ControlStyle-CssClass="btn btn-info" ButtonType="Link" SelectText="Select" ShowSelectButton="True">
+                    <%--<asp:CommandField ControlStyle-CssClass="btn btn-info" ButtonType="Link" SelectText="Select" ShowSelectButton="True">
                         <ItemStyle HorizontalAlign="Center" />
-                    </asp:CommandField>
-                </Columns>--%>
+                    </asp:CommandField>--%>
+                </Columns>
             </asp:GridView>
         </div>
     </form>
