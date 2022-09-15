@@ -17,6 +17,18 @@ namespace HRISWebApplication.DataAccess
             _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionStringCompany"].ConnectionString);
         }
 
+        public void Save(List<string> departmentInfo)
+        {
+            _conn.Open();
+
+            var sqlQuery = $"INSERT INTO [dbo].[Hrms_Department_Master] ([CompanyId], [OfficeLocationCode], [DepartmentCode], [DepartmentName], [DepartmentLocation], [HeadOfDepartment], [SubHeadOfDepartment]) VALUES ('{departmentInfo[0]}', '{departmentInfo[1]}', '{departmentInfo[2]}', '{departmentInfo[3]}', '{departmentInfo[4]}', '{departmentInfo[5]}', '{departmentInfo[6]}')";
+
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            command.ExecuteNonQuery();
+
+            _conn.Close();
+        }
+
         public DataTable GetDepartmentInformation()
         {
             _conn.Open();

@@ -99,5 +99,52 @@ namespace HRISWebApplication.Setup
         {
             OfficeLocationCode = OfficeLocationDDList.SelectedValue.ToString();
         }
+
+        protected void btnSaveDepartment_Click(object sender, EventArgs e)
+        {
+            if (btnSaveDepartment.Text.Equals("Save"))
+            {
+                SaveDepartment();
+            }
+            else if (btnSaveDepartment.Text.Equals("Update"))
+            {
+                UpdateDepartmentInformation();
+                btnSaveDepartment.Text = "Save";
+            }
+
+            ShowDepartmentInformation();
+            ClearAllInputs();
+        }
+
+        private void UpdateDepartmentInformation()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void SaveDepartment()
+        {
+            var departmentInfo = new List<string>();
+            departmentInfo.Add(CompanyId);
+            departmentInfo.Add(OfficeLocationCode);
+            departmentInfo.Add(txtDepartmentCode.Text);
+            departmentInfo.Add(txtDepartmentName.Text);
+            departmentInfo.Add(txtDepartmentLocation.Text);
+            departmentInfo.Add(txtHeadOfDepartment.Text);
+            departmentInfo.Add(txtSubHeadOfDepartment.Text);
+
+            departmentDataAccess.Save(departmentInfo);
+        }
+
+        private void ClearAllInputs()
+        {
+            LoadAllCompanies();
+            LoadAllOfficeLocations();
+
+            txtDepartmentCode.Text = string.Empty;
+            txtDepartmentName.Text = string.Empty;
+            txtDepartmentLocation.Text = string.Empty;
+            txtHeadOfDepartment.Text = string.Empty;
+            txtSubHeadOfDepartment.Text = string.Empty;
+        }
     }
 }

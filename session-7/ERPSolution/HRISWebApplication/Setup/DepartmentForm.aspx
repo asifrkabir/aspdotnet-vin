@@ -98,6 +98,9 @@
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveOfficeLocation" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveOfficeLocation_Click" />
                         <asp:Button class="btn btn-warning" ID="btnClearOfficeLocation" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearOfficeLocation_Click" />
                     </td>--%>
+                    <td>
+                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveDepartment" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveDepartment_Click" />
+                    </td>
                 </tr>
                 <tr>
                     <td>
