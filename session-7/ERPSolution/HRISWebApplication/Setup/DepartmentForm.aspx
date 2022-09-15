@@ -94,10 +94,10 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td>
+                    <%--<td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveOfficeLocation" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveOfficeLocation_Click" />
                         <asp:Button class="btn btn-warning" ID="btnClearOfficeLocation" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearOfficeLocation_Click" />
-                    </td>
+                    </td>--%>
                 </tr>
                 <tr>
                     <td>
@@ -118,7 +118,7 @@
 
             <h2 class="bg-primary text-center">ALL DEPARTMENTS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server" OnRowCommand="officeLocationGrid_RowCommand" OnRowDeleting="officeLocationGrid_RowDeleting" OnSelectedIndexChanged="officeLocationGrid_SelectedIndexChanged">
+            <%--<asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server" OnRowCommand="officeLocationGrid_RowCommand" OnRowDeleting="officeLocationGrid_RowDeleting" OnSelectedIndexChanged="officeLocationGrid_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />
@@ -127,7 +127,7 @@
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:CommandField>
                 </Columns>
-            </asp:GridView>
+            </asp:GridView>--%>
         </div>
     </form>
 </body>
