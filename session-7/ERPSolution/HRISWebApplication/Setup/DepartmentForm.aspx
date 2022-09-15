@@ -29,7 +29,16 @@
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:DropDownList ID="CompanyDDList" runat="server" Width="300px" OnSelectedIndexChanged="CompanyDDList_SelectedIndexChanged"></asp:DropDownList>
+                        <asp:DropDownList ID="CompanyDDList" runat="server" Width="300px" OnSelectedIndexChanged="CompanyDDList_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 250px;">
+                        <asp:Label ID="Label6" runat="server" Text="Office Location"></asp:Label>
+                    </td>
+                    <td style="width: 10px;">:</td>
+                    <td>
+                        <asp:DropDownList ID="OfficeLocationDDList" runat="server" Width="300px" OnSelectedIndexChanged="OfficeLocationDDList_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
