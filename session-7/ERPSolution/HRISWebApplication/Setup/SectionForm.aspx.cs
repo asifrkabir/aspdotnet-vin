@@ -186,9 +186,11 @@ namespace HRISWebApplication.Setup
 
                 CompanyDDList.SelectedValue = sectionGrid.Rows[selectedIndex].Cells[2].Text.Equals("&nbsp;") ? string.Empty : sectionGrid.Rows[selectedIndex].Cells[2].Text;
                 CompanyId = CompanyDDList.SelectedValue.ToString();
-                //OfficeLocationDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[3].Text;
+                LoadAllOfficeLocations();
+                OfficeLocationDDList.SelectedValue = sectionGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : sectionGrid.Rows[selectedIndex].Cells[3].Text;
                 OfficeLocationCode = OfficeLocationDDList.SelectedValue.ToString();
-                //DepartmentDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[4].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[4].Text;
+                LoadAllDepartments();
+                DepartmentDDList.SelectedValue = sectionGrid.Rows[selectedIndex].Cells[4].Text.Equals("&nbsp;") ? string.Empty : sectionGrid.Rows[selectedIndex].Cells[4].Text;
                 DepartmentCode = DepartmentDDList.SelectedValue.ToString();
                 txtSectionCode.Text = sectionGrid.Rows[selectedIndex].Cells[5].Text.Equals("&nbsp;") ? string.Empty : sectionGrid.Rows[selectedIndex].Cells[5].Text;
                 txtSectionName.Text = sectionGrid.Rows[selectedIndex].Cells[6].Text.Equals("&nbsp;") ? string.Empty : sectionGrid.Rows[selectedIndex].Cells[6].Text;

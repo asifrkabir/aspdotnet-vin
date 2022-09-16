@@ -169,7 +169,8 @@ namespace HRISWebApplication.Setup
 
                 CompanyDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[2].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[2].Text;
                 CompanyId = CompanyDDList.SelectedValue.ToString();
-                //OfficeLocationDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[3].Text;
+                LoadAllOfficeLocations();
+                OfficeLocationDDList.SelectedValue = departmentGrid.Rows[selectedIndex].Cells[3].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[3].Text;
                 OfficeLocationCode = OfficeLocationDDList.SelectedValue.ToString();
                 txtDepartmentCode.Text = departmentGrid.Rows[selectedIndex].Cells[4].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[4].Text;
                 txtDepartmentName.Text = departmentGrid.Rows[selectedIndex].Cells[5].Text.Equals("&nbsp;") ? string.Empty : departmentGrid.Rows[selectedIndex].Cells[5].Text;
