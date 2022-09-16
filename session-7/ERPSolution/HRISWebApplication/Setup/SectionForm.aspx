@@ -29,7 +29,7 @@
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:DropDownList ID="CompanyDDList" runat="server" Width="300px" AutoPostBack="true"></asp:DropDownList>
+                        <asp:DropDownList ID="CompanyDDList" runat="server" Width="300px" AutoPostBack="true" OnSelectedIndexChanged="CompanyDDList_SelectedIndexChanged"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -38,7 +38,7 @@
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:DropDownList ID="OfficeLocationDDList" runat="server" Width="300px" AutoPostBack="true"></asp:DropDownList>
+                        <asp:DropDownList ID="OfficeLocationDDList" runat="server" Width="300px" AutoPostBack="true" OnSelectedIndexChanged="OfficeLocationDDList_SelectedIndexChanged"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +47,7 @@
                     </td>
                     <td style="width: 10px;">:</td>
                     <td>
-                        <asp:DropDownList ID="DepartmentDDList" runat="server" Width="300px" AutoPostBack="true"></asp:DropDownList>
+                        <asp:DropDownList ID="DepartmentDDList" runat="server" Width="300px" AutoPostBack="true" OnSelectedIndexChanged="DepartmentDDList_SelectedIndexChanged"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
@@ -96,7 +96,7 @@
                     <td></td>
                     <td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveSection" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveSection_Click"  />
-                        <asp:Button class="btn btn-warning" ID="btnClearDepartment" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearDepartment_Click" />
+                        <asp:Button class="btn btn-warning" ID="btnClearSection" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearSection_Click" />
                     </td>
                 </tr>
                 <tr>
