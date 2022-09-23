@@ -40,3 +40,11 @@
     </div>
 
 </asp:Content>--%>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+    <div class="d-flex justify-content-center align-items-center">
+        <h1>HRIS Web Application</h1>
+    </div>
+
+</asp:Content>

@@ -1,22 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="OfficeLocationForm.aspx.cs" Inherits="HRISWebApplication.Setup.OfficeLocationForm" %>
+﻿<%@ Page MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="OfficeLocationForm.aspx.cs" Inherits="HRISWebApplication.Setup.OfficeLocationForm" %>
 
-<!DOCTYPE html>
+<asp:Content ID="OfficeLocationForm" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <title>Company Information</title>
-
-    <style>
-        td{
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
     <form class="form" id="form1" runat="server">
         <div>
-            <h2 class="bg-primary text-center">OFFICE LOCATION SETUP</h2>
+            <h2 class="bg-primary text-center text-light">OFFICE LOCATION SETUP</h2>
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -95,8 +83,8 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveOfficeLocation" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveOfficeLocation_Click" />
-                        <asp:Button class="btn btn-warning" ID="btnClearOfficeLocation" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearOfficeLocation_Click" />
+                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveOfficeLocation" runat="server" Text="Save" OnClick="btnSaveOfficeLocation_Click" />
+                        <asp:Button class="btn btn-warning" ID="btnClearOfficeLocation" runat="server" Text="Clear All" OnClick="btnClearOfficeLocation_Click" />
                     </td>
                 </tr>
                 <tr>
@@ -116,7 +104,7 @@
                 </tr>
             </table>
 
-            <h2 class="bg-primary text-center">ALL OFFICE LOCATIONS</h2>
+            <h2 class="bg-primary text-center text-light">ALL OFFICE LOCATIONS</h2>
 
             <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server" OnRowCommand="officeLocationGrid_RowCommand" OnRowDeleting="officeLocationGrid_RowDeleting" OnSelectedIndexChanged="officeLocationGrid_SelectedIndexChanged">
                 <Columns>
@@ -130,5 +118,5 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+
+</asp:Content>

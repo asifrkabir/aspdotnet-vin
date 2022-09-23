@@ -3,7 +3,7 @@
 <asp:Content ID="CompanyInformationForm" ContentPlaceHolderID="MainContent" runat="server">
 
     <form class="form" id="form1" runat="server">
-        <div class="mt-2">
+        <div>
             <h2 class="bg-primary text-light text-center">COMPANY SETUP</h2>
             <table style="width: 100%;">
                 <tr>
@@ -156,7 +156,7 @@
                     <td></td>
                     <td>
                         <asp:Button style="margin-right: 20px" class="btn btn-primary px-4" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
-                        <asp:Button class="btn btn-warning text-light" ID="btnClear" runat="server" Text="Clear All" OnClick="btnClear_Click"  />
+                        <asp:Button class="btn btn-warning" ID="btnClear" runat="server" Text="Clear All" OnClick="btnClear_Click"  />
                     </td>
                 </tr>
                 <tr>

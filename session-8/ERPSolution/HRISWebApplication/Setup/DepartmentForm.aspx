@@ -1,26 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DepartmentForm.aspx.cs" Inherits="HRISWebApplication.Setup.DepartmentForm" %>
+﻿<%@ Page MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="DepartmentForm.aspx.cs" Inherits="HRISWebApplication.Setup.DepartmentForm" %>
 
-<!DOCTYPE html>
+<asp:Content ID="DepartmentForm" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <title>Company Information</title>
-
-    <style>
-        td{
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
     <form class="form" id="form1" runat="server">
         <div>
-            <h2 class="bg-primary text-center">DEPARTMENT SETUP</h2>
+            <h2 class="bg-primary text-center text-light">DEPARTMENT SETUP</h2>
             <table style="width: 100%;">
                 <tr>
-                    <td>
-                        &nbsp;
+                    <td>&nbsp;
                     </td>
                 </tr>
                 <tr>
@@ -87,36 +74,32 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        &nbsp;
+                    <td>&nbsp;
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td>
-                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSaveDepartment" runat="server" Text="Save" Width="100px" Height="30px" OnClick="btnSaveDepartment_Click" />
-                        <asp:Button class="btn btn-warning" ID="btnClearDepartment" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClearDepartment_Click" />
+                        <asp:Button Style="margin-right: 20px" class="btn btn-primary" ID="btnSaveDepartment" runat="server" Text="Save" OnClick="btnSaveDepartment_Click" />
+                        <asp:Button class="btn btn-warning" ID="btnClearDepartment" runat="server" Text="Clear All" OnClick="btnClearDepartment_Click" />
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        &nbsp;
+                    <td>&nbsp;
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        &nbsp;
+                    <td>&nbsp;
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        &nbsp;
+                    <td>&nbsp;
                     </td>
                 </tr>
             </table>
 
-            <h2 class="bg-primary text-center">ALL DEPARTMENTS</h2>
+            <h2 class="bg-primary text-center text-light">ALL DEPARTMENTS</h2>
 
             <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting" OnSelectedIndexChanging="departmentGrid_SelectedIndexChanging">
                 <Columns>
@@ -130,5 +113,5 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+
+</asp:Content>
