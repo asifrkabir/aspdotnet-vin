@@ -1,19 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CompanyInformationForm.aspx.cs" Inherits="HRISWebApplication.Setup.CompanyInformationForm" %>
+﻿<%@ Page MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="CompanyInformationForm.aspx.cs" Inherits="HRISWebApplication.Setup.CompanyInformationForm" %>
 
-<!DOCTYPE html>
+<asp:Content ID="CompanyInformationForm" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <title>Company Information</title>
-
-    <style>
-        td{
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
     <form class="form" id="form1" runat="server">
         <div>
             <h2 class="bg-primary text-center">COMPANY SETUP</h2>
@@ -202,5 +190,4 @@
             </asp:GridView>
         </div>
     </form>
-</body>
-</html>
+</asp:Content>
