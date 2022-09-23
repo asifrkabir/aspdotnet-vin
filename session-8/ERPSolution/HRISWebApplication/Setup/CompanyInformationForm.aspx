@@ -178,7 +178,7 @@
 
             <h2 class="bg-primary text-center text-light">ALL COMPANIES</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting" OnSelectedIndexChanged="companyGrid_SelectedIndexChanged">
+            <asp:GridView CssClass="table table-dark table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting" OnSelectedIndexChanged="companyGrid_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True" >
                         <ItemStyle HorizontalAlign="Center" />

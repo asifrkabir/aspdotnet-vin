@@ -106,7 +106,7 @@
 
             <h2 class="bg-primary text-center text-light">ALL SECTIONS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="sectionGrid" runat="server" OnRowCommand="sectionGrid_RowCommand" OnRowDeleting="sectionGrid_RowDeleting" OnSelectedIndexChanged="sectionGrid_SelectedIndexChanged">
+            <asp:GridView CssClass="table table-dark table-bordered table-condensed table-striped" ID="sectionGrid" runat="server" OnRowCommand="sectionGrid_RowCommand" OnRowDeleting="sectionGrid_RowDeleting" OnSelectedIndexChanged="sectionGrid_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />

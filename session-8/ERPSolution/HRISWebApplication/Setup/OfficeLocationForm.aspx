@@ -106,7 +106,7 @@
 
             <h2 class="bg-primary text-center text-light">ALL OFFICE LOCATIONS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server" OnRowCommand="officeLocationGrid_RowCommand" OnRowDeleting="officeLocationGrid_RowDeleting" OnSelectedIndexChanged="officeLocationGrid_SelectedIndexChanged">
+            <asp:GridView CssClass="table table-dark table-bordered table-condensed table-striped" ID="officeLocationGrid" runat="server" OnRowCommand="officeLocationGrid_RowCommand" OnRowDeleting="officeLocationGrid_RowDeleting" OnSelectedIndexChanged="officeLocationGrid_SelectedIndexChanged">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />

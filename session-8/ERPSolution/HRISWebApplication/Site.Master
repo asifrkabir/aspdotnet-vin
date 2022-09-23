@@ -28,7 +28,7 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark border-bottom">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">HRIS Dashboard</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,14 +45,14 @@
         </div>
     </nav>
 
-    <div class="body-content">
+    <div class="body-content bg-dark text-light">
         <main class="min-vh-100">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
         </main>
         <hr />
         <footer class="text-center">
-            <p>&copy; <%: DateTime.Now.Year %> | Asif Rezwan Kabir</p>
+            <p class="m-0">&copy; <%: DateTime.Now.Year %> | Asif Rezwan Kabir</p>
         </footer>
 
 

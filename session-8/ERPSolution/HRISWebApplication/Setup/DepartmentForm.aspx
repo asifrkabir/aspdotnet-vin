@@ -101,7 +101,7 @@
 
             <h2 class="bg-primary text-center text-light">ALL DEPARTMENTS</h2>
 
-            <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting" OnSelectedIndexChanging="departmentGrid_SelectedIndexChanging">
+            <asp:GridView CssClass="table table-dark table-bordered table-condensed table-striped" ID="departmentGrid" runat="server" OnRowCommand="departmentGrid_RowCommand" OnRowDeleting="departmentGrid_RowDeleting" OnSelectedIndexChanging="departmentGrid_SelectedIndexChanging">
                 <Columns>
                     <asp:CommandField ControlStyle-CssClass="btn btn-danger" ButtonType="Link" DeleteText="Delete" ShowDeleteButton="True">
                         <ItemStyle HorizontalAlign="Center" />
