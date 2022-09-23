@@ -3,8 +3,8 @@
 <asp:Content ID="CompanyInformationForm" ContentPlaceHolderID="MainContent" runat="server">
 
     <form class="form" id="form1" runat="server">
-        <div>
-            <h2 class="bg-primary text-center">COMPANY SETUP</h2>
+        <div class="mt-2">
+            <h2 class="bg-primary text-light text-center">COMPANY SETUP</h2>
             <table style="width: 100%;">
                 <tr>
                     <td>
@@ -155,8 +155,8 @@
                     <td></td>
                     <td></td>
                     <td>
-                        <asp:Button style="margin-right: 20px" class="btn btn-primary" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" Width="100px" Height="30px" />
-                        <asp:Button class="btn btn-warning" ID="btnClear" runat="server" Text="Clear All" Width="100px" Height="30px" OnClick="btnClear_Click"  />
+                        <asp:Button style="margin-right: 20px" class="btn btn-primary px-4" ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+                        <asp:Button class="btn btn-warning text-light" ID="btnClear" runat="server" Text="Clear All" OnClick="btnClear_Click"  />
                     </td>
                 </tr>
                 <tr>
@@ -176,7 +176,7 @@
                 </tr>
             </table>
 
-            <h2 class="bg-primary text-center">ALL COMPANIES</h2>
+            <h2 class="bg-primary text-center text-light">ALL COMPANIES</h2>
 
             <asp:GridView CssClass="table table-bordered table-condensed table-striped" ID="companyGrid" runat="server" OnRowCommand="companyGrid_RowCommand" OnRowDeleting="companyGrid_RowDeleting" OnSelectedIndexChanged="companyGrid_SelectedIndexChanged">
                 <Columns>
