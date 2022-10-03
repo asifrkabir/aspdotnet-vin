@@ -44,6 +44,21 @@ namespace HRISWebApplication.DataAccess
             return dataTable;
         }
 
+        public DataTable GetSectionInformation(string companyId, string officeLocationCode, string departmentCode)
+        {
+            _conn.Open();
+
+            string sqlQuery = $"SELECT [CompanyId], [OfficeLocationCode], [DepartmentCode], [SectionCode], [SectionName], [HeadOfSection], [SubHeadOfSection] FROM [dbo].[Hrms_Section_Master] WHERE CompanyId = '{companyId}' AND OfficeLocationCode = '{officeLocationCode}' AND DepartmentCode = '{departmentCode}'";
+            SqlCommand command = new SqlCommand(sqlQuery, _conn);
+            SqlDataReader reader = command.ExecuteReader();
+            var dataTable = new DataTable();
+            dataTable.Load(reader);
+
+            _conn.Close();
+
+            return dataTable;
+        }
+
         public void DeleteRow(string sectionCode)
         {
             _conn.Open();

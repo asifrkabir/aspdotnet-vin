@@ -40,6 +40,7 @@
                     <a class="nav-link" href="/Setup/OfficeLocationForm">Office Location Form</a>
                     <a class="nav-link" href="/Setup/DepartmentForm">Department Form</a>
                     <a class="nav-link" href="/Setup/SectionForm">Section Form</a>
+                    <a class="nav-link" href="/Setup/DesignationForm">Designation Form</a>
                 </div>
             </div>
         </div>

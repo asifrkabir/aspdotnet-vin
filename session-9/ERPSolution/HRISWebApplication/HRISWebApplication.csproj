@@ -155,6 +155,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Setup\CompanyInformationForm.aspx" />
     <Content Include="Setup\DepartmentForm.aspx" />
+    <Content Include="Setup\DesignationForm.aspx" />
     <Content Include="Setup\OfficeLocationForm.aspx" />
     <Content Include="Setup\SectionForm.aspx" />
     <Content Include="Site.Master" />
@@ -182,6 +183,7 @@
     </Compile>
     <Compile Include="DataAccess\CompanyDataAccess.cs" />
     <Compile Include="DataAccess\DepartmentDataAccess.cs" />
+    <Compile Include="DataAccess\DesignationDataAccess.cs" />
     <Compile Include="DataAccess\OfficeLocationDataAccess.cs" />
     <Compile Include="DataAccess\SectionDataAccess.cs" />
     <Compile Include="Default.aspx.cs">
@@ -208,6 +210,13 @@
     </Compile>
     <Compile Include="Setup\DepartmentForm.aspx.designer.cs">
       <DependentUpon>DepartmentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\DesignationForm.aspx.cs">
+      <DependentUpon>DesignationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Setup\DesignationForm.aspx.designer.cs">
+      <DependentUpon>DesignationForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Setup\OfficeLocationForm.aspx.cs">
       <DependentUpon>OfficeLocationForm.aspx</DependentUpon>
